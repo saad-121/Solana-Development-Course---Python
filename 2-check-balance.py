@@ -14,7 +14,7 @@ import sys
 
 import requests
 
-solana_client = Client(clusterApiUrl("mainnet-beta"))
+solana_client = Client(clusterApiUrl("devnet"))
 
 # address = Pubkey.from_string('CenYq6bDRB7p73EjsPEpiYN7uveyPUTdXkDkgUduboaN')
 
@@ -22,6 +22,14 @@ solana_client = Client(clusterApiUrl("mainnet-beta"))
 secret_key = json.loads(os.environ.get("SECRET_KEY"))
 
 address = Keypair.from_bytes(secret_key).pubkey()
+
+# lamps = 1 * LAMPORTS_PER_SOL
+# # Request an airdrop (in lamports, 1 SOL = 1,000,000,000 lamports)
+# airdrop_signature = solana_client.request_airdrop(address, 1000000000)
+
+# # Confirm the airdrop transaction
+# confirmation = solana_client.confirm_transaction(airdrop_signature['result'])
+# print(confirmation)
 
 balance = solana_client.get_balance(address).value
 print(f"The balance of the account at {address} is {balance} lamports.")

@@ -1,3 +1,5 @@
 .env
 .venv
 test.py
+my_sol_functions.py
+my_special_functions.py

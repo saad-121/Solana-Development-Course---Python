@@ -10,8 +10,6 @@ from solana.rpc.api import Client
 
 from solders.transaction import VersionedTransaction
 
-from solders.pubkey import Pubkey
-from solana.rpc.api import Client
 from solders.system_program import TransferParams, transfer
 from solana.transaction import Transaction
 
