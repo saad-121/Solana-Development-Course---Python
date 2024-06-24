@@ -140,6 +140,7 @@ accounts = [\
 instruction = Instruction(TOKEN_METADATA_PROGRAM_ID, instruction_structure.build(instruction_data), accounts)
 
 # Create and sign the transaction
+
 blockhash = solana_client.get_latest_blockhash().value.blockhash
 
 msg = MessageV0.try_compile(
